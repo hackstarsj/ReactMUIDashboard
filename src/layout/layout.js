@@ -103,12 +103,18 @@ const Layout = ({sidebarList,pageTitle}) => {
 
   const drawerWidth = 280;
   const handleSidebarMenuClick=(sidebarItem,index)=>{
-    if(sidebarItem.expanded){
-        sidebarItem.expanded=true;
+    if(sidebarItem.children && sidebarItem.children.length>0){
+        if(sidebarItem.expanded){
+          sidebarItem.expanded=true;
+      }
+      sidebarItem.expanded=!sidebarItem.expanded;
+      sidebarItems[index]=sidebarItem;
+      setSidebarItems([...sidebarItems])
     }
-    sidebarItem.expanded=!sidebarItem.expanded;
-    sidebarItems[index]=sidebarItem;
-    setSidebarItems([...sidebarItems])
+    else{
+      navigate(sidebarItem.link);
+    }
+
   }
 
   const getIcon = (icon) => {

@@ -8,7 +8,7 @@ const  App=()=>{
     {
       name:"Auth Pages",
       icon:"home",
-      link:"/auth"
+      link:"/ReactMUIDashboard/auth"
     },
     {
       name:"Home",
