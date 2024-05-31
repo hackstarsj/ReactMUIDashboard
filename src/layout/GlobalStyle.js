@@ -66,6 +66,35 @@ export const GlobalStyles = () => {
           margin-right:7px!important;  
           background-color:${theme.palette.primary.light}!important;
         }
+        body {
+          /* Define scrollbar styles for Chrome */
+          scrollbar-width: thin;
+          scrollbar-color: ${theme.palette.primary.main} ${theme.palette.background.default};
+  
+          /* Define scrollbar styles for Firefox */
+          scrollbar-width: thin;
+          scrollbar-color: ${theme.palette.primary.main} ${theme.palette.background.default};
+  
+          /* Hide scrollbar arrows */
+          &::-webkit-scrollbar {
+            width: 10px;
+          }
+          &::-webkit-scrollbar-thumb {
+            background-color: ${theme.palette.primary.main};
+            border-radius: 5px;
+          }
+          &::-webkit-scrollbar-track {
+            background-color: ${theme.palette.background.default};
+          }
+          &::-webkit-scrollbar-button {
+            display: none; /* Hide scrollbar arrows */
+          }
+  
+          /* Hide scrollbar arrows in Firefox */
+          scrollbar-width: thin;
+          scrollbar-color: ${theme.palette.primary.main} ${theme.palette.background.default};
+        }
+        
       `}
     />
   );

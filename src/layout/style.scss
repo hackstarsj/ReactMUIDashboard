@@ -15,28 +15,32 @@ img.logo{
     padding: 0px 20px;
 }
 /* Custom scrollbar for Webkit browsers */
-::-webkit-scrollbar {
-    width: 12px;
-    height: 12px;
-}
+// ::-webkit-scrollbar {
+//     width: 12px;
+//     height: 12px;
+// }
 
-::-webkit-scrollbar-track {
-    background: #f1f1f1;
-    border-radius: 10px;
-}
+// ::-webkit-scrollbar-track {
+//     background: #f1f1f1;
+//     border-radius: 10px;
+// }
 
-::-webkit-scrollbar-thumb {
-    background-color: #888; 
-    border-radius: 10px;
-    border: 3px solid #f1f1f1;
-}
+// ::-webkit-scrollbar-thumb {
+//     background-color: #888; 
+//     border-radius: 10px;
+//     border: 3px solid #f1f1f1;
+// }
 
-::-webkit-scrollbar-thumb:hover {
-    background: #555;
-}
+// ::-webkit-scrollbar-thumb:hover {
+//     background: #555;
+// }
 
-/* Custom scrollbar for Firefox */
-html {
-    scrollbar-width: thin; /* options: auto, thin, none */
-    scrollbar-color: #888 #f1f1f1; /* thumb color, track color */
+// /* Custom scrollbar for Firefox */
+// html {
+//     scrollbar-width: thin; /* options: auto, thin, none */
+//     scrollbar-color: #888 #f1f1f1; /* thumb color, track color */
+// }
+
+.sidebar li{
+    cursor: pointer;
 }

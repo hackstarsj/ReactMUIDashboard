@@ -7,8 +7,9 @@ import { orangeDarkTheme, orangeLightTheme, basicTheme,darkTheme,lightTheme,cust
 import logo from '../assets/logo.svg';
 import { GlobalStyles } from './GlobalStyle';
 import TextField from '@mui/material/TextField';
+import { Outlet,useNavigate } from 'react-router-dom'; // Import Outlet
 
-const Layout = ({children,sidebarList,pageTitle}) => {
+const Layout = ({sidebarList,pageTitle}) => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [desktopOpen, setDesktopOpen] = useState(true); // State for desktop sidebar
   const [themeMode, setThemeMode] = useState('light');
@@ -16,9 +17,10 @@ const Layout = ({children,sidebarList,pageTitle}) => {
   const [anchorEl, setAnchorEl] = useState(null);
   const [themeMenu, setThemeMenu] = useState(null);
   const [sidebarItems, setSidebarItems] = useState(sidebarList);
+  const navigate=useNavigate();
 
   useEffect(() => {
-    const savedTheme = localStorage.getItem('theme') || 'light';
+    const savedTheme = localStorage.getItem('theme') || 'basic';
     setThemeMode(savedTheme);
   }, []);
 
@@ -57,14 +59,13 @@ const Layout = ({children,sidebarList,pageTitle}) => {
   );
 
   const handleDrawerToggle = () => {
-//    setMobileOpen(!mobileOpen);
     if (window.innerWidth >= 960) {
       setDesktopOpen(!desktopOpen); // Toggle desktop sidebar only when in desktop view
     }
-else{
-setMobileOpen(!mobileOpen);
-}  
-};
+    else{
+      setMobileOpen(!mobileOpen);
+    }
+  };
 
   const toggleTheme = () => {
     const newTheme = themeMode === 'light' ? 'dark' : 'light';
@@ -389,6 +390,7 @@ setMobileOpen(!mobileOpen);
               marginLeft: { xs: 0, sm: desktopOpen ? `${drawerWidth}px` : 0 },
               display: 'flex',
               flexDirection: 'column',
+              
             }}
           >
             <AppBar position="sticky" sx={{ backgroundColor: theme.palette.background.default, backgroundImage: 'none', borderBottomWidth: '1px', borderBottomStyle: 'solid', borderBottomColor: theme.palette.background.paper }} className='appbar'>
@@ -437,7 +439,7 @@ setMobileOpen(!mobileOpen);
             {profileMenu}
             {themeMenuUI}
             <section className='main-content' style={{ padding: '20px' }}>
-              {children}
+              <Outlet/>
             </section>
             <Box
               component="footer"

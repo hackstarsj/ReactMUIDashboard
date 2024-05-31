@@ -1,7 +1,15 @@
+import { RouterProvider,createBrowserRouter } from "react-router-dom";
 import SampleComponent from "./SampleComponent";
 import Layout from "./layout/layout";
+import Auth from "./auth/Auth";
+import ButtonExample from "./examples/Buttons";
 const  App=()=>{
   let sidebarItems=[
+    {
+      name:"Auth Pages",
+      icon:"home",
+      link:"/auth"
+    },
     {
       name:"Home",
       icon:"home",
@@ -115,8 +123,28 @@ const  App=()=>{
       ]
     }
   ]
-  return <Layout sidebarList={sidebarItems}>
-    <SampleComponent/>
-  </Layout>
+
+  const router=createBrowserRouter([
+    {
+      'path':'/auth',
+      'element':<Auth/>
+    },
+    {
+      'path':'/',
+      'element':<Layout sidebarList={sidebarItems}/>,
+      'children':[
+        {
+          'path':'',
+          'element':<SampleComponent/>
+        },
+        {
+          'path':'button',
+          'element':<ButtonExample/>
+        }
+      ]
+    }
+  ])
+
+  return <RouterProvider router={router}/>
 }
 export default App;
