@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/ReactMUIDashboard/static/css/main.4141f7a4.css",
+    "main.js": "/ReactMUIDashboard/static/js/main.752b049e.js",
+    "static/js/453.ae12efee.chunk.js": "/ReactMUIDashboard/static/js/453.ae12efee.chunk.js",
+    "static/media/logo.svg": "/ReactMUIDashboard/static/media/logo.75318d595daee1a89b02279aaf00cd06.svg",
+    "static/media/like-svgrepo-com.svg": "/ReactMUIDashboard/static/media/like-svgrepo-com.7272f59d01ca3c7795c70937619a5231.svg",
+    "index.html": "/ReactMUIDashboard/index.html",
+    "main.4141f7a4.css.map": "/ReactMUIDashboard/static/css/main.4141f7a4.css.map",
+    "main.752b049e.js.map": "/ReactMUIDashboard/static/js/main.752b049e.js.map",
+    "453.ae12efee.chunk.js.map": "/ReactMUIDashboard/static/js/453.ae12efee.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4141f7a4.css",
+    "static/js/main.752b049e.js"
+  ]
+}
