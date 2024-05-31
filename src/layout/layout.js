@@ -57,11 +57,14 @@ const Layout = ({children,sidebarList,pageTitle}) => {
   );
 
   const handleDrawerToggle = () => {
-    setMobileOpen(!mobileOpen);
+//    setMobileOpen(!mobileOpen);
     if (window.innerWidth >= 960) {
       setDesktopOpen(!desktopOpen); // Toggle desktop sidebar only when in desktop view
     }
-  };
+else{
+setMobileOpen(!mobileOpen);
+}  
+};
 
   const toggleTheme = () => {
     const newTheme = themeMode === 'light' ? 'dark' : 'light';
