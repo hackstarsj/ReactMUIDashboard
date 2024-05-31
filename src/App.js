@@ -126,11 +126,11 @@ const  App=()=>{
 
   const router=createBrowserRouter([
     {
-      'path':'/auth',
+      'path':'/ReactMUIDashboard/auth',
       'element':<Auth/>
     },
     {
-      'path':'/',
+      'path':'/ReactMUIDashboard/',
       'element':<Layout sidebarList={sidebarItems}/>,
       'children':[
         {

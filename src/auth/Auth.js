@@ -50,7 +50,7 @@ const Auth = () => {
 
 
   const goHome=() => {
-    navigate('/');
+    navigate('/ReactMUIDashboard/');
   }
 
   const handleChange = (event, newValue) => {
