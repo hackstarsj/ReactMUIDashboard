@@ -2,6 +2,11 @@
 
 Welcome to the React Dashboard project! This dashboard is built using Material-UI (MUI) and supports multiple themes. It provides a customizable and responsive interface for various use cases.
 
+## Demo
+
+You can check out the live demo [here](https://hackstarsj.github.io/ReactMUIDashboard/).
+
+
 ## Features
 
 - Multiple themes (Light, Dark, Blue Light, Blue Dark, Green Light, Green Dark, Red Light, Red Dark, Orange Light, Orange Dark)
