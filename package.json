@@ -1,7 +1,7 @@
 {
   "name": "reactdashboardui",
   "version": "0.1.0",
-  "homepage": "https://hackstarsj.github.io/ReactMUIDashboard",
+  "homepage": "https://hackstarsj.github.io/ReactMUIDashboard/",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.11.4",
